@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #0B1121;
+    color: #E2E8F0;
+    margin: 0;
+    padding: 0;
+    background-image: 
+        radial-gradient(circle at 15% 50%, rgba(30, 58, 138, 0.2), transparent 35%),
+        radial-gradient(circle at 85% 30%, rgba(14, 116, 144, 0.2), transparent 35%),
+        radial-gradient(circle at 50% 100%, rgba(139, 92, 246, 0.15), transparent 40%);
+    background-attachment: fixed;
+}
+
+/* Glassmorphism utility */
+.glass-panel {
+    background: rgba(15, 23, 42, 0.65);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.5);
+}
+
+/* Mode Card focus and hover styles */
+.mode-card {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.mode-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(56, 189, 248, 0.3);
+    box-shadow: 0 15px 35px -10px rgba(14, 116, 144, 0.3);
+}
+
+.mode-card.selected-human {
+    border-color: #38bdf8;
+    background: rgba(56, 189, 248, 0.1);
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
+}
+
+.mode-card.selected-bot {
+    border-color: #f87171;
+    background: rgba(248, 113, 113, 0.1);
+    box-shadow: 0 0 20px rgba(248, 113, 113, 0.3);
+}
+
+/* Input styles */
+.cyber-input {
+    background: rgba(15, 23, 42, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #F8FAFC;
+    transition: all 0.3s ease;
+}
+
+.cyber-input:focus {
+    outline: none;
+    border-color: #38bdf8;
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
+    background: rgba(15, 23, 42, 0.95);
+}
+
+/* Captcha Image Style */
+.captcha-container {
+    background: #ffffff;
+    padding: 0.5rem;
+    border-radius: 0.75rem;
+    border: 2px solid rgba(255,255,255,0.05);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+/* Interaction Log Scrollbar */
+.interaction-log {
+    max-height: 200px;
+    overflow-y: auto;
+    font-family: 'Courier New', Courier, monospace;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    color: #94A3B8;
+}
+
+.interaction-log::-webkit-scrollbar {
+    width: 6px;
+}
+.interaction-log::-webkit-scrollbar-track {
+    background: rgba(0,0,0,0.2); 
+}
+.interaction-log::-webkit-scrollbar-thumb {
+    background: rgba(56, 189, 248, 0.3); 
+    border-radius: 3px;
+}
+.interaction-log::-webkit-scrollbar-thumb:hover {
+    background: rgba(56, 189, 248, 0.7); 
+}
+
+/* JS Result Text Overrides for Dark Mode */
+.text-red-600, .text-red-700 {
+    color: #f87171 !important; /* Tailwind red-400 */
+    text-shadow: 0 0 10px rgba(248, 113, 113, 0.4);
+}
+.text-green-600 {
+    color: #4ade80 !important; /* Tailwind green-400 */
+    text-shadow: 0 0 10px rgba(74, 222, 128, 0.4);
+}
+.text-yellow-500 {
+    color: #fde047 !important; /* Tailwind yellow-300 */
+}
+
